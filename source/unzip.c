@@ -4,6 +4,7 @@
 #include <dirent.h>
 #include <switch.h>
 
+#include "config.h"
 #include "unzip.h"
 
 #define WRITEBUFFERSIZE 0x1000 // 4KiB
@@ -58,10 +59,6 @@ int unzip(const char *output)
     }
 
     unzClose(zfile);
-    remove(output);
-    
-    printf("\nfinished!\n\nRemember to reboot for the patches to be loaded!\n");
-    consoleUpdate(NULL);
 
     return 0;
 }

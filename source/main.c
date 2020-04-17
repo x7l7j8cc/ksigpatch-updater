@@ -1,40 +1,45 @@
 #include <stdio.h>
 #include <stdarg.h>
+#include <string.h>
 #include <unistd.h> // chdir
 #include <dirent.h> // mkdir
 #include <switch.h>
 
+#include "config.h"
 #include "download.h"
+#include "tcolor.h"
 #include "unzip.h"
 
 
-#define ROOT                    "/"
-#define APP_PATH                "/switch/sigpatch-updater/"
-#define APP_OUTPUT              "/switch/sigpatch-updater/sigpatch-updater.nro"
-#define OLD_APP_PATH            "/switch/sigpatch-updater.nro"
-
-#define APP_VERSION             "0.1.3"
-#define CURSOR_LIST_MAX         2
-
-
-const char *OPTION_LIST[] =
-{
-    "= Update Sigpatches (For Atmosphere Users)",
-    "= Update Sigpatches (For Hekate / Kosmos Users)",
-    "= Update this app"
+const char *OPTION_LIST[] = {
+    LOPTION_1 ,LOPTION_2, //LOPTION_3
+};
+const char *IOPTION_LIST[] = {
+    LIOPTION_1 ,LIOPTION_2, //LOPTION_3
 };
 
 void refreshScreen(int cursor)
 {
     consoleClear();
+    
+    //Change to Cyan Text then to Red
+    changeTColor("cyan"); printf("%s: v%s.\n", APP_NAME, APP_VERSION);
+    changeTColor("red"); printf("Original Code by %s, modded for Kosmos Only by %s\n\n", ORIG_AUTHOR, MODK_AUTHOR);
+    
+    //Change to White Text
+    changeTColor("white"); printf("\nPress (UP/DOWN) to navigate and (A) to select option\nPress (+) to exit\n\n\n");
 
-    printf("\x1B[36mSigpatch-Updater: v%s.\x1B[37m\n\n\n", APP_VERSION);
-    printf("Press (A) to select option\n\n");
-    printf("Press (+) to exit\n\n\n");
-
+    changeTColor("green"); //Change to Green Text
     for (int i = 0; i < CURSOR_LIST_MAX + 1; i++)
-        printf("[%c] %s\n\n", cursor == i ? 'X' : ' ', OPTION_LIST[i]);
-
+    {
+        if( access( CHECK_PATCH, F_OK ) != -1 ) {
+            // file exists
+            printf("[%c] %s\n\n", cursor == i ? '>' : ' ', OPTION_LIST[i]);
+        } else {
+            // file doesn't exist
+            printf("[%c] %s\n\n", cursor == i ? '>' : ' ', IOPTION_LIST[i]);
+        }
+    }
     consoleUpdate(NULL);
 }
 
@@ -54,10 +59,26 @@ int appInit()
     return 0;
 }
 
+void appRefresh()
+{
+    appInit();
+    refreshScreen(0);
+}
+
 void appExit()
 {
     socketExit();
     consoleExit(NULL);
+}
+
+void kosmosUpdEnd()
+{
+    changeTColor("magenta"); //Change to Magenta Text
+    printf("\nFinished!!!\n\nRemember to Reboot for the patches to be loaded!\n");
+    printf("Press + to Exit or Wait 3 Second to Reload Menu.\n");
+    consoleUpdate(NULL);
+    svcSleepThread(3000000000ull);
+    appRefresh();
 }
 
 int main(int argc, char **argv)
@@ -99,23 +120,35 @@ int main(int argc, char **argv)
 
         if (kDown & KEY_A)
         {
+            changeTColor("yellow"); //Change to Yellow Text
             switch (cursor)
             {
-            case UP_SIGS:
-                if (downloadFile(AMS_SIG_URL, TEMP_FILE, OFF))
+            case UP_MSIG:
+                if (downloadFile(SIG_MINI_URL, TEMP_FILE, OFF))
+                {
                     unzip(TEMP_FILE);
+                    changeTColor("red"); printf("removing temp files...\n");
+                    remove(TEMP_FILE);
+                    remove(DEL_TINFOIL_PATCH); //removing Tinfoil-Patch (if found)
+                    kosmosUpdEnd();
+                }
                 else
                 {
-                    printDisplay("Failed to download ams sigpatches\n");
+                    printDisplay("Failed to download kosmos sigpatches\n");
                 }
                 break;
 
-            case UP_JOONIE:
-                if (downloadFile(HEKATE_SIG_URL, TEMP_FILE, OFF))
+            case UP_FSIG:
+                if (downloadFile(SIG_FULL_URL, TEMP_FILE, OFF))
+                {
                     unzip(TEMP_FILE);
+                    changeTColor("red"); printf("removing temp files...\n");
+                    remove(TEMP_FILE);
+                    kosmosUpdEnd();
+                }
                 else
                 {
-                    printDisplay("Failed to download hekate sigpatches\n");
+                    printDisplay("Failed to download kosmos sigpatches w/ tinfoil patch\n");
                 }
                 break;
 

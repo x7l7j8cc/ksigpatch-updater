@@ -8,6 +8,7 @@
 #include <curl/curl.h>
 #include <switch.h>
 
+#include "config.h"
 #include "download.h"
 
 #define API_AGENT           "ITotalJustice"
