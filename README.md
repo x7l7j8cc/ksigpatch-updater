@@ -1,10 +1,9 @@
 # Kosmos Sigpatch-Updater
 Original App by [ITotalJustice](https://github.com/ITotalJustice), ive only done some modification to Kosmos Only Users.
 
-This is an updater for your Kosmos sigpatches! Currently it has the option to:
+This update your Kosmos sigpatches, and currently it has the option to:
 
 * Download Mini patches for ES/FS Only
-
 * Download Full patches for Tinfoil Support
 
 ![Img](images/2020041718070200-DB1426D1DFD034027CECDE9C2DD914B8.jpg)
