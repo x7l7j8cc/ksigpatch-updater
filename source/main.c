@@ -23,7 +23,7 @@ void refreshScreen(int cursor)
     consoleClear();
     
     //Change to Cyan Text then to Red
-    changeTColor("cyan"); printf("%s: v%s.\n", APP_NAME, APP_VERSION);
+    changeTColor("cyan"); printf("\n%s: v%s.\n", APP_NAME, APP_VERSION);
     changeTColor("red"); printf("Original Code by %s, modded for Kosmos Only by %s\n\n", ORIG_AUTHOR, MODK_AUTHOR);
     
     //Change to White Text
@@ -76,6 +76,15 @@ void kosmosUpdEnd()
     changeTColor("magenta"); //Change to Magenta Text
     printf("\nFinished!!!\n\nRemember to Reboot for the patches to be loaded!\n");
     printf("Press + to Exit or Wait 3 Second to Reload Menu.\n");
+    consoleUpdate(NULL);
+    svcSleepThread(3000000000ull);
+    appRefresh();
+}
+void appUpdEnd()
+{
+    changeTColor("magenta"); //Change to Magenta Text
+    printf("\nApp Updated!!!\n");
+    printf("Please Wait 3 Second to Reload Menu.\n");
     consoleUpdate(NULL);
     svcSleepThread(3000000000ull);
     appRefresh();
@@ -155,9 +164,9 @@ int main(int argc, char **argv)
             case UP_APP:
                 if (downloadFile(APP_URL, TEMP_FILE, OFF))
                 {
-                    remove(APP_OUTPUT);
-                    rename(TEMP_FILE, APP_OUTPUT);
-                    remove(OLD_APP_PATH);
+                    changeTColor("red"); printf("installing app file...\n");
+                    remove(APP_OUTPUT); rename(TEMP_FILE, APP_OUTPUT); remove(OLD_APP_PATH);
+                    appUpdEnd();
                 }
                 else
                 {
