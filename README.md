@@ -10,7 +10,7 @@ This update your Kosmos sigpatches, and currently it has the option to:
 
 ----
 
-#= Where does it download the patches from?
+# Where does it download the patches from?
 
 The Hekate / Kosmos patches are downloaded from the [latest github release from Joonie](https://github.com/Joonie86/hekate/releases). And its Directly update from my website (php script).
 
