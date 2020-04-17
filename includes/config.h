@@ -20,7 +20,7 @@
 //Link to DL will AutoUpdate files from Server side.
 #define SIG_MINI_URL    "http://teamx7l7j8cc.altervista.org/n3sw_lastupd/SigPatchKosmos_MINI.zip"
 #define SIG_FULL_URL    "http://teamx7l7j8cc.altervista.org/n3sw_lastupd/SigPatchKosmos_FULL.zip"
-#define APP_URL         "-https://github.com/ITotalJustice/sigpatch-updater/releases/latest/download/sigpatch-updater.nro"
+#define APP_URL         "https://github.com/x7l7j8cc/sigpatch-updater/releases/latest/download/ksigpatch-updater.nro"
 
 //Temp File to remove, and patch file for tinfoil (if found)
 #define DEL_TINFOIL_PATCH  "/atmosphere/kips/ams_mitm.kip"
