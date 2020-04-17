@@ -1,10 +1,11 @@
-# Sigpatch-Updater
+# Kosmos Sigpatch-Updater
+Original App by [ITotalJustice](https://github.com/ITotalJustice), ive only done some modification to Kosmos Only Users.
 
-This is a updater for you sigpatches! Currently it has the option to:
+This is an updater for your Kosmos sigpatches! Currently it has the option to:
 
-* Download patches needed for Atmosphere
+* Download Mini patches for ES/FS Only
 
-* Download patches needed for Hekate / Kosmos
+* Download Full patches for Tinfoil Support
 
 ![Img](images/2020041718070200-DB1426D1DFD034027CECDE9C2DD914B8.jpg)
 
@@ -12,19 +13,15 @@ This is a updater for you sigpatches! Currently it has the option to:
 
 #= Where does it download the patches from?
 
-The patches are download from my [patches repo](https://github.com/ITotalJustice/patches). These are automatically updated from the sources below.
-
-The Atmosphere patches are downloaded from [this gbatemp thread](https://gbatemp.net/threads/i-heard-that-you-guys-need-some-sweet-patches-for-atmosphere.521164/) which has proven to be the most trusted source for patches.
-
-The Hekate / Kosmos patches are downloaded from the [latest github release from Joonie](https://github.com/Joonie86/hekate/releases).
+The Hekate / Kosmos patches are downloaded from the [latest github release from Joonie](https://github.com/Joonie86/hekate/releases). And its Directly update from my website (php script).
 
 ----
 
 ## Special Thanks!
 
-[toph](https://github.com/sudot0ph) for the design of the app icon!
+[ITotalJustice](https://github.com/ITotalJustice) for the Sigpatch-updater
 
-The-4n for continuing to update the sigpatch thread of gbatemp!
+[toph](https://github.com/sudot0ph) for the design of the app icon!
 
 Joonie for the continuing to update the hekate patches!
 
@@ -32,6 +29,6 @@ Joonie for the continuing to update the hekate patches!
 
 ## Patreon
 
-Feel free to support me on patreon, I would really appreciate it!
+Feel free to support [ITotalJustice](https://github.com/ITotalJustice) on patreon!
 
 <a href="https://www.patreon.com/totaljustice"><img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" alt="Patreon donate button" /> </a>
