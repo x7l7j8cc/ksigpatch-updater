@@ -10,7 +10,7 @@
 
 #define APP_NAME                "Kosmos Sigpatch-Updater"
 #define APP_VERSION             "0.1.3 Mod"
-#define CURSOR_LIST_MAX         1 //On-SCREEN OPTION LIST -1
+#define CURSOR_LIST_MAX         2 //On-SCREEN OPTION LIST -1
 
 #define UP_MSIG       0
 #define UP_FSIG       1
