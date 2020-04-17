@@ -41,7 +41,7 @@ APP_TITLE   := 	Kosmos Sigpatch-Updater
 APP_AUTHOR  := 	TotalJustice & x7l7j8cc
 APP_VERSION := 	0.1.4
 
-TARGET		:=	k$(notdir $(CURDIR))
+TARGET		:=	$(notdir $(CURDIR))
 BUILD		:=	build
 SOURCES		:=	source
 DATA		:=	data
