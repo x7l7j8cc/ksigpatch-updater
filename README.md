@@ -6,7 +6,7 @@ This is a updater for you sigpatches! Currently it has the option to:
 
 * Download patches needed for Hekate / Kosmos
 
-![Img](images/example.jpg)
+![Img](images/2020041718070200-DB1426D1DFD034027CECDE9C2DD914B8.jpg)
 
 ----
 
