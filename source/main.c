@@ -12,10 +12,10 @@
 
 
 const char *OPTION_LIST[] = {
-    LOPTION_1 ,LOPTION_2, //LOPTION_3
+    LOPTION_1 ,LOPTION_2, LOPTION_3
 };
 const char *IOPTION_LIST[] = {
-    LIOPTION_1 ,LIOPTION_2, //LOPTION_3
+    LIOPTION_1 ,LIOPTION_2, LOPTION_3
 };
 
 void refreshScreen(int cursor)
