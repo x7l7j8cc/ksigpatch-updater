@@ -1,3 +1,9 @@
+# ATTENTION
+
+Since [Joonie](https://github.com/Joonie86) deleted the Repository on GitHub for the SigPatches, this will be Directly Downloaded from my website and its the Latest Release v15.5.
+
+----
+
 # Kosmos Sigpatch-Updater
 Original App by [ITotalJustice](https://github.com/ITotalJustice), ive only done some modification to Kosmos Only Users.
 
