@@ -38,6 +38,6 @@
 #define LOPTION_2       "Update Kosmos (Full) Sigpatches (+ACID for Tinfoil Support)"
 #define LIOPTION_2       "Install Kosmos (Full) Sigpatches (+ACID for Tinfoil Support)"
 #define LOPTION_3       "Update Sigpatches by HarukoNX"
-#define LIOPTION_3       "Install Sigpatches by HarukoNX (Install Kosmos Full Patches first.)"
+#define LIOPTION_3       "Install Sigpatches by HarukoNX"
 #define LOPTION_4       "Remove Nichole-Logo from Kosmos Boot"
 #define LOPTION_5       "Update this App"
