@@ -1,6 +1,7 @@
 # ATTENTION
 
-Since [Joonie](https://github.com/Joonie86) deleted the Repository on GitHub for the SigPatches, this will be Directly Downloaded from my website and its a Backup of the Latest Release v15.5.
+Since [Joonie](https://github.com/Joonie86) deleted the Repository on GitHub for the SigPatches, this will be Directly Downloaded from this Git and its a Backup of the Latest Release v15.5.
+Now, [HarukoNX](https://github.com/HarukoNX/Atmosphere) Posted a new Git for the SigPatches, and this added a New Option to this Updater, as you can see from the screen.
 
 ----
 
@@ -11,6 +12,8 @@ This update your Kosmos sigpatches, and currently it has the option to:
 
 * Download Mini patches for ES/FS Only
 * Download Full patches for Tinfoil Support
+* Download patches from HarukoNX Git (New!)
+* Remove the Nichole-Logo at Kosmos Boot (New!)
 
 ![Img](images/2020041915280800-DB1426D1DFD034027CECDE9C2DD914B8.jpg)
 
