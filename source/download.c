@@ -107,7 +107,7 @@ bool downloadFile(const char *url, const char *output, int api)
 
             if (res == CURLE_OK)
             {
-                printf("\n\ndownload complete!\n\n");
+                printf("\ndownload complete!\n\n");
                 consoleUpdate(NULL);
                 return true;
             }
