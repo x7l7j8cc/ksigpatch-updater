@@ -20,10 +20,10 @@
 
 
 //Link to DL will AutoUpdate files from Server side.
-#define SIG_MINI_URL    "http://teamx7l7j8cc.altervista.org/n3sw_lastupd/SigPatchKosmos_MINI.zip"
-#define SIG_FULL_URL    "http://teamx7l7j8cc.altervista.org/n3sw_lastupd/SigPatchKosmos_FULL.zip"
-#define SIG_HARK1_URL    "https://github.com/HarukoNX/Atmosphere/releases/latest/download/loader.kip"
-#define SIG_HARK2_URL    "https://github.com/HarukoNX/Atmosphere/releases/latest/download/patches.ini"
+#define SIG_MINI_URL    "https://github.com/x7l7j8cc/ksigpatch-updater/releases/download/v0.1.4-mod/latest-Kosmos-Patches_v15.5_byJoonie86-MINI.zip"
+#define SIG_FULL_URL    "https://github.com/x7l7j8cc/ksigpatch-updater/releases/download/v0.1.4-mod/latest-Kosmos-Patches_v15.5_byJoonie86-FULL.zip"
+#define SIG_HARK1_URL   "https://github.com/HarukoNX/Atmosphere/releases/latest/download/loader.kip"
+#define SIG_HARK2_URL   "https://github.com/HarukoNX/Atmosphere/releases/latest/download/patches.ini"
 #define APP_URL         "https://github.com/x7l7j8cc/ksigpatch-updater/releases/latest/download/ksigpatch-updater.nro"
 
 //Temp File to remove, and patch file for tinfoil (if found)
