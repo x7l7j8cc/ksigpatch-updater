@@ -16,7 +16,7 @@ This update your Kosmos sigpatches, and currently it has the option to:
 * Download patches from HarukoNX Git (New!)
 * Remove the Nichole-Logo at Kosmos Boot (New!)
 
-![Img](images/2020041915280800-DB1426D1DFD034027CECDE9C2DD914B8.jpg)
+![Img](images/2020041915593600-DB1426D1DFD034027CECDE9C2DD914B8.jpg)
 
 ----
 
