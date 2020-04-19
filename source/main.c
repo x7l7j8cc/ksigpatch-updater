@@ -91,38 +91,27 @@ void appExit()
     consoleExit(NULL);
 }
 
-void kosmosUpdEnd()
+void workVEnd(const char *option)
 {
     changeTColor("magenta"); //Change to Magenta Text
-    printf("\nFinished!!!\n\nRemember to Reboot for the patches to be loaded!\n");
-    printf("Press + to Exit or Wait 3 Second to Reload Menu.\n");
-    consoleUpdate(NULL);
-    svcSleepThread(3000000000ull);
-    appRefresh();
-}
-void appUpdEnd()
-{
-    changeTColor("magenta"); //Change to Magenta Text
-    printf("\nApp Updated!!!\n");
-    printf("Please Wait 3 Second to Reload Menu.\n");
-    consoleUpdate(NULL);
-    svcSleepThread(3000000000ull);
-    appRefresh();
-}
-void rmvNLOGEnd()
-{
-    changeTColor("magenta"); //Change to Magenta Text
-    printf("\nNichole Logo Removed!!!\n");
-    printf("Please Wait 3 Second to Reload Menu.\n");
-    consoleUpdate(NULL);
-    svcSleepThread(3000000000ull);
-    appRefresh();
-}
-void rmvSigPtcEnd()
-{
-    changeTColor("magenta"); //Change to Magenta Text
-    printf("\nSigPatches Removed!!!\n");
-    printf("Please Wait 3 Second to Reload Menu.\n");
+    
+    if( strcmp(option, "kosmosUpd") == 0 ){
+        printf("\nFinished!!!\n\nRemember to Reboot for the patches to be loaded!\n");
+        printf("Press + to Exit or Wait 3 Second to Reload Menu.\n");
+    } else if( strcmp(option, "appUpd") == 0 ){
+        printf("\nApp Updated!!!\n");
+        printf("Please Wait 3 Second to Reload Menu.\n");
+    } else if( strcmp(option, "rmvNLOG") == 0 ){
+        printf("\nNichole Logo Removed!!!\n");
+        printf("Please Wait 3 Second to Reload Menu.\n");
+    } else if( strcmp(option, "rmvSigPtc") == 0 ){
+        printf("\nSigPatches Removed!!!\n");
+        printf("Please Wait 3 Second to Reload Menu.\n");
+    } else {
+        printf("\nOption not Setted!!!\n");
+        printf("Please Wait 3 Second to Reload Menu.\n");
+    }
+
     consoleUpdate(NULL);
     svcSleepThread(3000000000ull);
     appRefresh();
@@ -177,7 +166,7 @@ int main(int argc, char **argv)
                     changeTColor("red"); printf("removing temp files...\n");
                     remove(TEMP_FILE);
                     remove(DIR_TINFOIL_PATCH); //removing Tinfoil-Patch (if found)
-                    kosmosUpdEnd();
+                    workVEnd("kosmosUpd");
                 }
                 else
                 {
@@ -191,7 +180,7 @@ int main(int argc, char **argv)
                     unzip(TEMP_FILE);
                     changeTColor("red"); printf("removing temp files...\n");
                     remove(TEMP_FILE);
-                    kosmosUpdEnd();
+                    workVEnd("kosmosUpd");
                 }
                 else
                 {
@@ -235,7 +224,7 @@ int main(int argc, char **argv)
                         remove(DIR_FILE_HEKATE); rename(TEMP_FILE, DIR_FILE_HEKATE);
                         printf("removing temp file...\n");
                         remove(TEMP_FILE);
-                        kosmosUpdEnd();
+                        workVEnd("kosmosUpd");
                     }
                     else
                     {
@@ -251,7 +240,7 @@ int main(int argc, char **argv)
             case UP_RMNL:
                 changeTColor("red"); printf("removing nichole logo...\n");
                 removeFolder(DIR_NICHOLELOGO);
-                rmvNLOGEnd();
+                workVEnd("rmvNLOG");
                 break;
                 
             case UP_RMPT:
@@ -267,7 +256,7 @@ int main(int argc, char **argv)
                     changeTColor("red");
                     printf("removing temp file...\n");
                     remove(TEMP_FILE);
-                    rmvSigPtcEnd();
+                    workVEnd("rmvSigPtc");
                 }
                 else
                 {
@@ -280,7 +269,7 @@ int main(int argc, char **argv)
                 {
                     changeTColor("red"); printf("installing app file...\n");
                     remove(APP_OUTPUT); rename(TEMP_FILE, APP_OUTPUT); remove(OLD_APP_PATH);
-                    appUpdEnd();
+                    workVEnd("appUpd");
                 }
                 else
                 {
