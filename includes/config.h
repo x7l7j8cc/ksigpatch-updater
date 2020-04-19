@@ -25,7 +25,7 @@
 #define SIG_FULL_URL    "https://github.com/x7l7j8cc/ksigpatch-updater/releases/download/v0.1.4-mod/latest-Kosmos-Patches_v15.5_byJoonie86-FULL.zip"
 #define SIG_HARK1_URL   "https://github.com/HarukoNX/Atmosphere/releases/latest/download/loader.kip"
 #define SIG_HARK2_URL   "https://github.com/HarukoNX/Atmosphere/releases/latest/download/patches.ini"
-#define SIG_HEKATE_PTC  "https://github.com/x7l7j8cc/ksigpatch-updater/releases/latest/download/sigpatch_hekate_ipl.ini"
+#define SIG_HEKATE_PTC  "https://github.com/x7l7j8cc/ksigpatch-updater/releases/download/v0.1.4-mod/sigpatch_hekate_ipl.ini"
 #define SIG_REMOVE_URL  "https://github.com/x7l7j8cc/ksigpatch-updater/releases/latest/download/default_kosmos_config.zip"
 #define APP_URL         "https://github.com/x7l7j8cc/ksigpatch-updater/releases/latest/download/ksigpatch-updater.nro"
 
