@@ -21,13 +21,13 @@
 
 
 //Link to DL will AutoUpdate files from Server side.
-//#define SIG_MINI_URL    "https://github.com/x7l7j8cc/ksigpatch-updater/releases/download/v0.1.4-mod/latest-Kosmos-Patches_v15.5_byJoonie86-MINI.zip"
-//#define SIG_FULL_URL    "https://github.com/x7l7j8cc/ksigpatch-updater/releases/download/v0.1.4-mod/latest-Kosmos-Patches_v15.5_byJoonie86-FULL.zip"
+//#define SIG_MINI_URL    "https://github.com/x7l7j8cc/ksigpatch-updater/releases/download/ptcfiles/latest-Kosmos-Patches_v15.5_byJoonie86-MINI.zip"
+//#define SIG_FULL_URL    "https://github.com/x7l7j8cc/ksigpatch-updater/releases/download/ptcfiles/latest-Kosmos-Patches_v15.5_byJoonie86-FULL.zip"
 #define SIG_HARK1_URL   "https://github.com/HarukoNX/Atmosphere/releases/latest/download/loader.kip"
 #define SIG_HARK2_URL   "https://github.com/HarukoNX/Atmosphere/releases/latest/download/patches.ini"
-#define AMS_MITM_PATCH  "https://github.com/x7l7j8cc/ksigpatch-updater/releases/download/v0.1.4-mod/ams_mitm.kip"
-#define SIG_HEKATE_PTC  "https://github.com/x7l7j8cc/ksigpatch-updater/releases/download/v0.1.4-mod/sigpatch_hekate_ipl.ini"
-#define SIG_REMOVE_URL  "https://github.com/x7l7j8cc/ksigpatch-updater/releases/latest/download/default_kosmos_config.zip"
+#define AMS_MITM_PATCH  "https://github.com/x7l7j8cc/ksigpatch-updater/releases/download/ptcfiles/ams_mitm.kip"
+#define SIG_HEKATE_PTC  "https://github.com/x7l7j8cc/ksigpatch-updater/releases/download/ptcfiles/sigpatch_hekate_ipl.ini"
+#define SIG_REMOVE_URL  "https://github.com/x7l7j8cc/ksigpatch-updater/releases/download/ptcfiles/default_kosmos_config.zip"
 #define APP_URL         "https://github.com/x7l7j8cc/ksigpatch-updater/releases/latest/download/ksigpatch-updater.nro"
 
 //Temp File to remove, and patch file for tinfoil (if found)
