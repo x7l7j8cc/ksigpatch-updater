@@ -12,10 +12,10 @@
 
 
 const char *OPTION_LIST[] = {
-    LOPTION_1 ,LOPTION_2, LOPTION_3, LOPTION_4, LOPTION_5, LOPTION_6
+    LOPTION_1 ,LOPTION_2, LOPTION_3
+    //, LOPTION_4, LOPTION_5, LOPTION_6
 };
 short cursor = 0;
-//const char *IOPTION_LIST[] = { LIOPTION_1 ,LIOPTION_2, LIOPTION_3, LOPTION_4, LOPTION_5, LOPTION_6 };
 
 
 void removeFolder(const char *fld)
@@ -48,9 +48,9 @@ void refreshScreen(int cursor)
     changeTColor("green"); //Change to Green Text
     for (int i = 0; i < CURSOR_LIST_MAX + 1; i++)
     {
-        if( i == 2 ){ changeTColor("cyan");
-        } else if( i == 3 || i == 4 ){ changeTColor("white");
-        } else if( i == 5 ){ changeTColor("red");
+        if( i == 5 ){ changeTColor("cyan");
+        } else if( i == 1 ){ changeTColor("white");
+        } else if( i == 2 ){ changeTColor("red");
         } else {
             changeTColor("green");
         }
@@ -159,6 +159,7 @@ int main(int argc, char **argv)
             changeTColor("yellow"); //Change to Yellow Text
             switch (cursor)
             {
+            /*
             case UP_MSIG:
                 if (downloadFile(SIG_MINI_URL, TEMP_FILE, OFF))
                 {
@@ -187,7 +188,7 @@ int main(int argc, char **argv)
                     printDisplay("Failed to download kosmos sigpatches w/ tinfoil patch\n");
                 }
                 break;
-                
+            */
             case UP_HSIG:
                 changeTColor("red"); printf("creating kips folder...\n"); mkdir(DIR_RMV_KIPS, 0777);
                 changeTColor("yellow");
@@ -216,6 +217,21 @@ int main(int argc, char **argv)
                     }
                     
                     changeTColor("yellow");
+                    if (downloadFile(AMS_MITM_PATCH, TEMP_FILE, OFF))
+                    {
+                        //unzip(TEMP_FILE);
+                        changeTColor("red");
+                        printf("moving tinfoil patch...\n");
+                        remove(DIR_TINFOIL_PATCH); rename(TEMP_FILE, DIR_TINFOIL_PATCH);
+                        printf("removing temp file...\n");
+                        remove(TEMP_FILE);
+                    }
+                    else
+                    {
+                        printDisplay("Failed to download hekate-ipl\n");
+                    }
+                    
+                    changeTColor("yellow");
                     if (downloadFile(SIG_HEKATE_PTC, TEMP_FILE, OFF))
                     {
                         //unzip(TEMP_FILE);
@@ -236,13 +252,13 @@ int main(int argc, char **argv)
                     printDisplay("Failed to download sigpatches by HarukoNX-loader patch\n");
                 }
                 break;
-                
+            /*
             case UP_RMNL:
                 changeTColor("red"); printf("removing nichole logo...\n");
                 removeFolder(DIR_NICHOLELOGO);
                 workVEnd("rmvNLOG");
                 break;
-                
+            */  
             case UP_RMPT:
                 changeTColor("red"); printf("removing sigpatches from kosmos...\n");
                 removeFolder(DIR_RMV_ESPATCH);
